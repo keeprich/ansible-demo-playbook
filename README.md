@@ -83,6 +83,7 @@ database
       write a simple ansible playbook    with the name playbbok.yml 
 
   - name: install apache on webserver
+  ```yml
     hosts: webserver  
     become: true
     vars:
@@ -96,10 +97,10 @@ database
          name: apache2
          state: latest
 
-
+```
 
 to run it cd into where the inventory file is and run the following
-      $ ansible-playbook -i hosts -k playbook.yml
+            $ ansible-playbook -i hosts -k playbook.yml
 
 
 PROJECT
@@ -117,7 +118,7 @@ PROJECT
       To get the correct folder strudtre for ansible roles 'run ansible-galaxy init roles/apache2'
                         NOTE: the roles name is apache2, this can be anything you want.
 
-                        it adaviceable to create roles for differnt tasks eg. webservers, database servers, loadbalancers etc.
+            it adaviceable to create roles for differnt tasks eg. webservers, database servers, loadbalancers etc.
 
 
 
