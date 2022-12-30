@@ -71,13 +71,14 @@ database
             ansible all -i hosts -m command -a 'sudo apt-get -y install python-simplejson'
 
 14. Try your hands on some ah-hoc commands
+```bash
 
                   ansible database -i hosts --become -m apt -a 'name=mysql-server state=present'
                   ansible all -i hosts --become -m apt -a 'update_cache=yes'
                   ansible database -i hosts -m service -a 'name=mysql-server state=started'
                   ansible database -i hosts --become -m service -a 'name=mysql-server state=restarted'
                   ansible webstack -i hosts -m command -a 'reboot --reboot'
-
+```
 15. Ansible playbook
 
       write a simple ansible playbook    with the name playbbok.yml 
